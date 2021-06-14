@@ -4,6 +4,10 @@ files:
   - source: /
     destination: /web/
 hooks:
+  BeforeInstall:
+    - location: scripts/install.sh
+      timeout: 300
+      runas: root
   AfterInstall:
     - location: scripts/mkdir.sh
       timeout: 300
